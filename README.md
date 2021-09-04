@@ -1,8 +1,8 @@
 # Service Provider Functions
 
-Service Provider Functions is a small libary (1 class) that takes care of the boilerplate .net core IServiceCollection dependency injection code for AWS Lambda Functions in .net core 3.1.
+Service Provider Functions is a small libary (1 class) that takes care of the .net core IServiceCollection dependency injection boilerplate code for AWS Lambda Functions in .net core 3.1.
 
-### To Use
+### How To Use
 
 1. Inherit from the `ServiceProviderFunction` class.
 2. Override the `ConfigureServices` method.
