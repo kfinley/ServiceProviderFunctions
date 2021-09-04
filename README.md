@@ -20,7 +20,7 @@ public class Function : ServiceProviderFunction {
 
   public async Task Handler(SomeRequest @event, ILambdaContext context) {
 
-    await return base.Run<ISomeService>(service => service.SomeMethod(@event);
+    await return base.Run<ISomeService>(service => service.SomeMethod(@event));
   }
 }
 ```
