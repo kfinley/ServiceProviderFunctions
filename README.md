@@ -10,17 +10,17 @@ Service Provider Functions is a small libary (1 class) that takes care of the .n
 
 Example:
 ```csharp
+using Amazon.Lambda.Core;
 using ServiceProviderFunctions;
 
-public class Function : ServiceProviderFunction {
+public class TestFunction : ServiceProviderFunction {
 
-  public override void ConfigureServices(IServiceCollection sc, IConfiguration configuration) {
-    sc.AddTransient<ISomeService, Service>();
+  protected override void ConfigureServices(IServiceCollection sc, IConfiguration configuration) {
+    sc.AddTransient<ITestService, TestService>();
   }
 
-  public async Task Handler(SomeRequest @event, ILambdaContext context) {
-
-    await return base.Run<ISomeService>(service => service.SomeMethod(@event));
+  public async Task Handler(TestRequest @event) {
+    await base.Run<ITestService>(service => service.TestMethod(@event));
   }
 }
 ```

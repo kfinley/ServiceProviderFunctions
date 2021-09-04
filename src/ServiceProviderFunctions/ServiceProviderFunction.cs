@@ -44,7 +44,7 @@ namespace ServiceProviderFunctions {
       // standard .Net ConfigurationBuilder boilerplate
       return new ConfigurationBuilder()
         .SetBasePath(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location))
-        .AddJsonFile("appsettings.json", false)
+        .AddJsonFile("appsettings.json", optional: true)
         .AddJsonFile($"appsettings.{EnvironmentName}.json", optional: true)
         .AddEnvironmentVariables();
     }
@@ -75,10 +75,11 @@ namespace ServiceProviderFunctions {
       return serviceProvider;
     }
 
-    protected async Task<TResult> Run<TService, TResult>(Func<TService, Task<TResult>> func) {
+    protected async Task Run<TService>(Func<TService, Task> func) {
       using (var scope = Scope) {
         var service = scope.ServiceProvider.GetService<TService>();
-        return await func(service);
+        var task = func(service);
+        await Task.WhenAll(task);
       }
     }
   }
