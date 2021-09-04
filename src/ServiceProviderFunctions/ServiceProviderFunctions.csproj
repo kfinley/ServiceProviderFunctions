@@ -7,8 +7,9 @@
     <Title>ServiceProviderFunctions</Title>
     <Copyright>© 2021 Kyle Finley</Copyright>
     <PackageTags>AWS Lambda ServiceCollection DependencyInjection IoC</PackageTags>
-    <Version>0.0.1</Version>
-    <Authors>Kyle Finley, kyle@kylefinley.net</Authors>
+    <Version>0.0.2</Version>
+    <Authors>Kyle Finley</Authors>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageProjectUrl>https://github.com/kfinley/ServiceProviderFunctions</PackageProjectUrl>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <RepositoryType>git</RepositoryType>
