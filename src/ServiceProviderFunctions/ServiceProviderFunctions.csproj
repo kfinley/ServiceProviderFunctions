@@ -7,7 +7,7 @@
     <Title>ServiceProviderFunctions</Title>
     <Copyright>© 2021 Kyle Finley</Copyright>
     <PackageTags>AWS Lambda ServiceCollection DependencyInjection IoC</PackageTags>
-    <Version>0.0.2</Version>
+    <Version>0.0.3</Version>
     <Authors>Kyle Finley</Authors>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageProjectUrl>https://github.com/kfinley/ServiceProviderFunctions</PackageProjectUrl>
@@ -18,8 +18,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="../../README.md" Pack="true" PackagePath="README.md" />
-    <None Include="../../LICENSE.txt" Pack="true" PackagePath="LICENSE.txt" />
+    <None Include="../../README.md" Pack="true" PackagePath="." />
+    <None Include="../../LICENSE.txt" Pack="true" PackagePath="." />
   </ItemGroup>
 
   <ItemGroup>
